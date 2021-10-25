@@ -1,3 +1,5 @@
+// 괄호 체크 문제
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
