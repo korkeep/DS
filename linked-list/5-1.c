@@ -64,5 +64,27 @@ void destroy_stack(){
 }
 
 void print_stack(char *msg){
+    Node *p;
+    printf("%s[%2d]= ", msg, size());
+    for(p=top; p!=NULL; p=p->link){
+        printf("%2d ", p->data);
+    }
+    printf("\n");
+}
+
+void main(){
+    int i;
+    init_stack();
     
+    for(i=1; i<10; i++)
+        push(i);
+    print_stack("연결된 스택 push 9회");
+    
+    printf("\t pop() --> %d\n", pop());
+    printf("\t pop() --> %d\n", pop());
+    printf("\t pop() --> %d\n", pop());
+    print_stack("연결된 스택 pop 3회");
+    
+    destroy_stack();
+    print_stack("연결된 스택 destroy");
 }
