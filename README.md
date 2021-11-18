@@ -50,3 +50,15 @@
     - 노드들은 메모리의 어느 곳에나 위치할 수 있다
     - 노드들의 순서가 연결 리스트상의 순서와 동일하지 않다
     - 연속적인 기억공간이 없어도 데이터를 저장하는 것이 가능하다
+- Tree 용어 정의
+    - degree: 트리가 가지고 있는 노드의 차수 중에서 가장 큰 값
+    - level: 트리의 각 층에 번호를 매기는 것
+    - Parent(부모) - Sibling(형제) - Child(자식)
+    - leaf: 자식 노드가 없는 단말 노드
+- Binary Tree
+    - full binary tree: 트리의 각 레벨에 노드가 꽉 차있는 이진트리
+    - complete binary tree: 1부터 k-1까지 노드가 꽉 차있고, 마지막 k에서는 오른쪽으로 노드가 순서대로 채워진 이진트리
+- Traversal
+    - Preorder: 전위 순회, VLR
+    - Inorder: 중위 순회, LVR
+    - Postorder: 후위 순회, LRV
