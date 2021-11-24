@@ -64,3 +64,13 @@
     - Preorder: 전위 순회, VLR
     - Inorder: 중위 순회, LVR
     - Postorder: 후위 순회, LRV
+- AVL Tree
+    - Balance Factor: 왼쪽 서브 트리의 높이 - 오른쪽 서브 트리의 높이
+    - Balance Factor의 차이가 1 이하인 이진탐색트리
+    - 이진탐색트리에서 항상 균형 트리를 보장 = O(logn)
+- AVL Tree Rotation
+    - LL 회전: A부터 N까지 경로상의 노드들을 오른쪽으로 회전
+    - LR 회전: A부터 N까지 경로상의 노드들을 왼쪽(RR)-오른쪽(LL)으로 회전
+    - RR 회전: A부터 N까지 경로상의 노드들을 왼쪽으로 회전
+    - RL 회전: A부터 N까지 경로상의 노드들을 오른쪽(LL)-왼쪽(RR)으로 회전
+> ![maxresdefault](https://user-images.githubusercontent.com/20378368/143194964-68140182-2209-4d8a-8531-5b7ef3955593.jpg)
