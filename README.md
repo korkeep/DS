@@ -70,7 +70,41 @@
     - 이진탐색트리에서 항상 균형 트리를 보장 = O(logn)
 - AVL Tree Rotation
     - LL 회전: A부터 N까지 경로상의 노드들을 오른쪽으로 회전
-    - LR 회전: A부터 N까지 경로상의 노드들을 왼쪽(RR)-오른쪽(LL)으로 회전
+    ```c
+    TNode *rotateLL(TNode *A){
+        TNode *B = A->left;
+        A->left = B->right;
+        B->right = A;
+        return B;
+    }
+    ```
     - RR 회전: A부터 N까지 경로상의 노드들을 왼쪽으로 회전
+    ```c
+    TNode *rotateRR(TNode *A){
+        TNode *B = A->right;
+        A->right = B->left;
+        B->left = A;
+        return B;
+    }
+    ```
+    - LR 회전: A부터 N까지 경로상의 노드들을 왼쪽(RR)-오른쪽(LL)으로 회전
+    ```c
+    TNode *rotateLR(TNode *A){
+        TNode *B = A->left;
+        A->left = rotateRR(B);
+        return rotateLL(A);
+    }
+    ```
     - RL 회전: A부터 N까지 경로상의 노드들을 오른쪽(LL)-왼쪽(RR)으로 회전
+    ```c
+    TNode *rotateRL(TNode *A){
+        TNode *B = A->right;
+        A->right = rotateLL(B);
+        return rotateRR(A);
+    }
+    ```
 > ![maxresdefault](https://user-images.githubusercontent.com/20378368/143194964-68140182-2209-4d8a-8531-5b7ef3955593.jpg)
+- Heap이란?
+    - Max Heap: 부모 노드의 키 값이 자식 노드의 키 값보다 항상 크거나 같은 완전이진트리
+    - Min Heap: 부모 노드의 키 값이 자식 노드의 키 값보다 항상 작거나 같은 완전이진트리
+    - 삽입, 삭제 = O(logN)
